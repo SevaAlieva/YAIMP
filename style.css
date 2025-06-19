@@ -21,7 +21,7 @@ body {
 
 button {
   padding: 10px 20px;
-  margin: 10px;
+  margin: 5px;
   font-family: inherit;
   font-size: 12px;
   background: #1a1a1a;
@@ -57,7 +57,7 @@ button:hover {
   justify-content: center;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   position: relative;
 }
 
@@ -77,7 +77,28 @@ button:hover {
 #controls {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+#controls-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+#win-screen p {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+#win-screen strong {
+  color: #00ffcc;
 }
 
 #hint-box {
@@ -99,11 +120,25 @@ button:hover {
   gap: 3px;
 }
 
+#path-comparison-user,
+#path-comparison-best {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  gap: 0px;
+  margin: -5px 0;
+}
+
 .mini-cell {
-  width: 26px;
-  height: 26px;
+  width: 55px;
+  height: 55px;
   background-image: url('images/coin.png');
   background-size: cover;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
   position: relative;
 }
 
@@ -116,4 +151,26 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.arrow-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 8px 12px;
+  background-color: #1a1a1a;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 70px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn:hover {
+  background-color: #00ffcc;
+  color: black;
 }
