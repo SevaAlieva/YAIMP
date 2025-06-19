@@ -154,6 +154,7 @@ function getDirection(from, to) {
   return "";
 }
 
+let maxPossibleScore = 0;
 function calculateBestPath() {
   const start = { x: 3, y: 3 };
   let queue = [{
@@ -190,12 +191,29 @@ function calculateBestPath() {
   }
 
   bestPath = best.path;
+  maxPossibleScore = best.score;
 }
 
 function showWinScreen(message) {
   document.getElementById("game").classList.add("hidden");
   document.getElementById("win-screen").classList.remove("hidden");
   document.getElementById("win-result").textContent = message;
+
+  
+  const scoreInfoContainer = document.querySelector("#win-screen #score-info");
+  if (scoreInfoContainer) {
+    scoreInfoContainer.innerHTML = "";
+  } else {
+    const container = document.createElement("div");
+    container.id = "score-info";
+    document.querySelector("#win-screen h2").after(container);
+  }
+
+  const infoHTML = `
+    <p>Ваш счёт: <strong>${score}</strong></p>
+    <p>Максимальное количество очков: <strong>${maxPossibleScore}</strong></p>
+  `;
+  document.querySelector("#win-screen #score-info").innerHTML = infoHTML;
 
   const userGrid = document.getElementById("path-comparison-user");
   const bestGrid = document.getElementById("path-comparison-best");
@@ -204,10 +222,20 @@ function showWinScreen(message) {
 
   for (let y = 0; y < 7; y++) {
     for (let x = 0; x < 7; x++) {
+      const originalCell = getCell(x, y); 
+      const value = originalCell ? originalCell.dataset.value : "0";
+
       const userCell = document.createElement("div");
       const bestCell = document.createElement("div");
+
       userCell.className = "mini-cell";
       bestCell.className = "mini-cell";
+
+      userCell.textContent = value;
+      bestCell.textContent = value;
+
+      userCell.style.color = "white";
+      bestCell.style.color = "white";
 
       if (path.some(p => p.x === x && p.y === y)) {
         userCell.style.backgroundColor = "red";
@@ -258,6 +286,18 @@ document.addEventListener("keydown", e => {
     case "arrowleft": case "a": movePlayer(-1, 0); break;
     case "arrowright": case "d": movePlayer(1, 0); break;
   }
+});
+
+document.querySelectorAll(".arrow-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const dir = button.dataset.direction;
+    switch (dir) {
+      case "up": movePlayer(0, -1); break;
+      case "down": movePlayer(0, 1); break;
+      case "left": movePlayer(-1, 0); break;
+      case "right": movePlayer(1, 0); break;
+    }
+  });
 });
 
 // Кнопка "Начать игру"
