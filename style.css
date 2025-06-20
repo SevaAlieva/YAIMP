@@ -184,19 +184,19 @@ button:hover {
   }
 
   #menu h1 {
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
    align-items: center;
   }
 
   #menu h2 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 30px;
    align-items: center;
   }
 
   #menu button {
-    font-size: 14px;
+    font-size: 12px;
     padding: 15px 30px;
     margin: 10px;
   }
@@ -209,9 +209,9 @@ button:hover {
   }
 
   .cell {
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
   }
 
   /* Кнопки управления */
