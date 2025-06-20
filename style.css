@@ -211,7 +211,7 @@ button:hover {
   .cell {
     width: 60px;
     height: 60px;
-    font-size: 10px;
+    font-size: 100px;
   }
 
   /* Кнопки управления */
