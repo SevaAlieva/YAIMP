@@ -180,7 +180,8 @@ button:hover {
   /* Главное меню */
   #menu {
     justify-content: center;
-    padding: 20px;
+    padding: 20px; 
+    bottom: 20px;
   }
 
   #menu h1 {
