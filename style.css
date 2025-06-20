@@ -185,7 +185,7 @@ button:hover {
 
   #menu h1 {
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: 10px;
    align-items: center;
   }
 
@@ -204,7 +204,7 @@ button:hover {
   /* Игровое поле */
   #grid {
     grid-template-columns: repeat(7, 100px);
-    gap: 10px;
+    gap: 5px;
     margin: 40px auto;
   }
 
