@@ -173,4 +173,88 @@ button:hover {
 .arrow-btn:hover {
   background-color: #00ffcc;
   color: black;
+} 
+
+@media (max-width: 600px) {
+
+  /* Главное меню */
+  #menu {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  #menu h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  #menu h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  #menu button {
+    font-size: 16px;
+    padding: 15px 30px;
+    margin: 10px;
+  }
+
+  /* Игровое поле */
+  #grid {
+    grid-template-columns: repeat(7, 80px);
+    gap: 10px;
+    margin: 40px auto;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+
+  /* Кнопки управления */
+  .arrow-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    min-width: 90px;
+    height: 40px;
+  }
+
+  .control-row.middle {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Мини-поля в финале */
+  .comparison-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mini-cell {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  #path-comparison-user,
+  #path-comparison-best {
+    grid-template-columns: repeat(7, 35px);
+    gap: 5px;
+  }
+
+  /* Подсказка и управление */
+  #hint-box {
+    font-size: 18px;
+  }
+
+  #controls {
+    font-size: 16px;
+  }
 }
+
+
+
+
+
