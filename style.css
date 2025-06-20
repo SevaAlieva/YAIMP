@@ -203,7 +203,7 @@ button:hover {
 
   /* Игровое поле */
   #grid {
-    grid-template-columns: repeat(7, 100px);
+    grid-template-columns: repeat(7, 60px);
     gap: 5px;
     margin: 40px auto;
   }
@@ -211,7 +211,7 @@ button:hover {
   .cell {
     width: 60px;
     height: 60px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   /* Кнопки управления */
