@@ -209,9 +209,9 @@ button:hover {
   }
 
   .cell {
-    width: 60px;
-    height: 60px;
-    font-size: 100px;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
   }
 
   /* Кнопки управления */
